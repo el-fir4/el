@@ -74,40 +74,19 @@ class Brute:
         if pepek in[""," "]:
             print("");prints(Panel("😡[bold red] jangan kosong kentod"));time.sleep(2);self.moch_yayan()
         elif pepek in["1","01"]:
-            if todz == "trial":
-                print("");prints(Panel("😔 anda adalah user [bold red]trial[/] cuma bisa menggunakan menu nomor [bold red]02.[/] upgrade ke premium untuk menikmati semua fiture..."));exit()
-            else:
-                dup.Dump().dump_grup(cookie, tokenz)
+            dup.Dump().dump_grup(cookie, tokenz)
         elif pepek in["2","02"]:
-            if todz == "trial":
-                dup.Dump().dump_free(cookie, tokenz)
-            else:
-                dup.Dump().dump_prem(cookie, tokenz)
+            dup.Dump().dump_prem(cookie, tokenz)
         elif pepek in["3","03"]:
-            if todz == "trial":
-                print("");prints(Panel("😔 anda adalah user [bold red]trial[/] cuma bisa menggunakan menu nomor [bold red]02.[/] upgrade ke premium untuk menikmati semua fiture..."));exit()
-            else:
-                dup.Dump().followers(cookie, tokenz)
+            dup.Dump().followers(cookie, tokenz)
         elif pepek in["4","04"]:
-            if todz == "trial":
-                print("");prints(Panel("😔 anda adalah user [bold red]trial[/] cuma bisa menggunakan menu nomor [bold red]02.[/] upgrade ke premium untuk menikmati semua fiture..."));exit()
-            else:
-                dup.Dump().like_post(cookie)
+            dup.Dump().like_post(cookie)
         elif pepek in["5","05"]:
-            if todz == "trial":
-                print("");prints(Panel("😔 anda adalah user [bold red]trial[/] cuma bisa menggunakan menu nomor [bold red]02.[/] upgrade ke premium untuk menikmati semua fiture..."));exit()
-            else:
-                dup.Dump().rendem(cookie, tokenz)
+            dup.Dump().rendem(cookie, tokenz)
         elif pepek in["6","06"]:
-            if todz == "trial":
-                print("");prints(Panel("😔 anda adalah user [bold red]trial[/] cuma bisa menggunakan menu nomor [bold red]02.[/] upgrade ke premium untuk menikmati semua fiture..."));exit()
-            else:
-                dup.Dump().komentar(cookie)
+            dup.Dump().komentar(cookie)
         elif pepek in["7","07"]:
-            if todz == "trial":
-                print("");prints(Panel("😔 anda adalah user [bold red]trial[/] cuma bisa menggunakan menu nomor [bold red]02.[/] upgrade ke premium untuk menikmati semua fiture..."));exit()
-            else:
-                cpp.Cek_has().gabut()
+            cpp.Cek_has().gabut()
         elif pepek in["8","08"]:
             xjs.Xnxx(cookie, tokenz)
         elif pepek in["9","09"]:
