@@ -256,10 +256,8 @@ atau bisa juga menggunakan kata sandi otomatis [{hijau}password bawaan script{ha
                     break
                 else:
                     continue
-            except Exception as e:
-                prints(e)
-#            except requests.exceptions.ConnectionError:
-#                time.sleep(15)
+            except requests.exceptions.ConnectionError:
+               time.sleep(15)
         self.loop+=1
     # ------- MENGECEK APLIKASI --------
     def cek_apk(self, user, pw, cok, ahh):
