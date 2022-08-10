@@ -42,7 +42,7 @@ warna_rich = random.choice(["[bold red]","[deep_pink3]","[blue]","[green]","[cya
 ############################ RESPONSE FACEBOOK ######################################
 class Brute:
     def __init__(self):
-        self.url = "https://licensi.yayandev.my.id/check.php?key="
+        self.url = []
         self.moch_yayan()
 
     def hapus_log(self):
@@ -51,33 +51,6 @@ class Brute:
 
     def moch_yayan(self):
         asy.Logo().log()
-        try:
-            key = open("data/lisen.txt", "r").read()
-        except FileNotFoundError:
-            exit(xx.Log_key(self.url))
-        try:
-            xnxx = urllib.request.urlopen(self.url+key+"&dev="+platform())
-            asuu = json.loads(xnxx.read())
-            mail = asuu["email"]
-            todz = asuu["usage"]
-            tod  = asuu["usage"].replace("premium", "[green]Ya[/]").replace("trial", "[red]Tidak[/]")
-            notice = asuu["readtext"]
-            bergabung = asuu["join"]
-            kadaluarsa = asuu["expired"]
-            IPS = r.get("https://api.ipify.org/?format=json").json()["ip"]
-            prints(Panel(f"""[{warna_rich}•{hapus}] Email      : {mail}
-[{warna_rich}•{hapus}] Bergabung  : {bergabung}
-[{warna_rich}•{hapus}] Premium    : {tod}
-[{warna_rich}•{hapus}] Kadaluarsa : {kadaluarsa} {hijau}{notice}{hapus}
-[{warna_rich}•{hapus}] IP         : {IPS}""",title=f'{hijau}INFO LISENSI{hapus}'))
-            if asuu["status"] == "error":
-                exit(f"\n  [{M}!{N}] error: "+asuu["msg"].replace("Anda telah menggunakan semua device yang tersisa, chat admin untuk menghapusnya", "Akses login di tolak! Dikarenakan anda sudah login di device atau perangkat sebelumnya."))
-            elif asuu["status"] in ["kadaluarsa", "sudah kadaluarsa"]:
-                print("");prints(Panel("😔[bold red] oppsh key anda telah mencapai batas masa aktif nya, silahkan upgrade ke premium."));time.sleep(3);exit(xx.Log_key(self.url))
-        except KeyError:
-            print("");prints(Panel(f"😔[bold red]  "+asuu["msg"].replace("Anda telah menggunakan semua device yang tersisa, chat admin untuk menghapusnya", "Akses login di tolak di tolak! Dikarenakan anda sudah login di device atau perangkat sebelumnya.")));exit()
-        except URLError:
-            print("");prints(Panel("😔[bold red] gagal menghubungkan ke server, silahkan cek koneksi anda dan mainkan mode pesawat 5 detik."));exit()
         try:
             tokenz = open(".token.txt", "r").read()
             cookie = {'cookie': open(".cokie.txt", "r").read()}
