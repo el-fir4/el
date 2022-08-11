@@ -90,14 +90,14 @@ class Xnxx:
 [{merah}00{hps}] Kembali """, title=f"{hijau}SETING USER AGENT{hps}"))
         pil = input(f"  [{M}?{N}] pilih: ")
         if pil in["1","01"]:
-            try:os.remove("data/ua_ran.txt")
+            try:os.remove("data/ua.txt")
             except:pass
             a = requests.get("https://github.com/Cindy-Aulia/p/blob/main/data/ua.txt").text
-            ua=open("data/ua_ran.txt", "w")
+            ua=open("data/ua.txt", "w")
             xx=re.findall('line">(.*?)<', str(a))
             for x in xx:
-                ua.write(xx+"\n")
-            ua=open("data/ua_ran.txt", "r").read().splitlines()
+                ua.write(x+"\n")
+            ua=open("data/ua.txt", "r").read().splitlines()
             for i in ua:
                 self.uas.append(i)
             prints(Panel("berhasil mengganti user agent"));input(f" [ {O}Kembali{N} ] ");tt.Brute()
