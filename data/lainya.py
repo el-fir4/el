@@ -162,7 +162,7 @@ class Xnxx:
             li = re.findall('<td><a class=\".*?\" href=\".*?\">(.*?)</a></td>',str(pra))
             for y in li:
                 try:
-                    x = f"{hijau}{y}{hps}"
+                    x = f"{y}"
                     self.asd += 1
                     pu = str(self.asd)
                     self.data_ua.update({pu:x.replace('[#AAAAAA]','')})
