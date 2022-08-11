@@ -190,7 +190,7 @@ atau bisa juga menggunakan kata sandi otomatis [{hijau}password bawaan script{ha
     def __metode__(self, user, pasw, cebok):
         prog.update(des,description=f"{str(self.loop)}/{len(self.id)} OK-:[bold green]{len(self.ok)}[/] CP-:[bold yellow]{len(self.cp)}[/]")
         prog.advance(des)
-        rr = open("uaku.txt", "r").read().splitlines()
+        rr = open("data/uaku.txt", "r").read().splitlines()
         uaa=random.choice(rr)
         for pw in pasw:
             try:
@@ -259,7 +259,7 @@ atau bisa juga menggunakan kata sandi otomatis [{hijau}password bawaan script{ha
                 else:
                     continue
             except requests.exceptions.ConnectionError:
-               time.sleep(15)
+               time.sleep(5)
         self.loop+=1
     # ------- MENGECEK APLIKASI --------
     def cek_apk(self, user, pw, cok, ahh):
