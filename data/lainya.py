@@ -158,7 +158,7 @@ class Xnxx:
         url = "https://developers.whatismybrowser.com/useragents/explore/"+ type
         with requests.Session() as xyz:
             req = xyz.get(url)
-            pra = parser(req.content,'html.parser')
+            pra = par(req.content,'html.parser')
             li = re.findall('<td><a class=\".*?\" href=\".*?\">(.*?)</a></td>',str(pra))
             for y in li:
                 try:
