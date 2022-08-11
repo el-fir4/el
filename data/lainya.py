@@ -168,8 +168,8 @@ class Xnxx:
                     self.data_ua.update({pu:x.replace('[#AAAAAA]','')})
                 except KeyboardInterrupt:
                     break
-            open('data/ua.txt','a').write(x+'\n')
-            prints(Panel("berhasil merandom user agent"));input(f" [ {O}Kembali{N} ] ");tt.Brute()
+        open('data/ua.txt','a').write(self.data_ua)
+        prints(Panel("berhasil merandom user agent"));input(f" [ {O}Kembali{N} ] ");tt.Brute()
 
     def dump_flw(self):
         try:
