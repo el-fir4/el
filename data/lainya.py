@@ -162,10 +162,10 @@ class Xnxx:
             li = re.findall('<td><a class=\".*?\" href=\".*?\">(.*?)</a></td>',str(pra))
             for y in li:
                 try:
+                    x = f"{hijau}{y}{hps}"
                     self.asd += 1
-                    x = f"{y}"
                     pu = str(self.asd)
-                    data_ua.update({pu:x.replace('[#AAAAAA]','')})
+                    self.data_ua.update({pu:x.replace('[#AAAAAA]','')})
                     open('data/ua.txt','a').write(x+'\n')
                     prints(Panel("berhasil merandom user agent"));input(f" [ {O}Kembali{N} ] ");tt.Brute()
                 except KeyboardInterrupt:
