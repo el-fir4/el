@@ -169,9 +169,10 @@ class Xnxx:
                     x = f"{y}"
                     pu = str(asd)
                     data_ua.update({pu:x.replace('[#AAAAAA]','')})
-                    open('uaku.txt','a').write(x+'\n')
+                    open('data/uaku.txt','w').write(x+'\n')
                 except KeyboardInterrupt:
                     break
+            prints(Panel("berhasil meerandom user agent"));input(f" [ {O}Kembali{N} ] ");tt.Brute()
 
     def dump_flw(self):
         try:
