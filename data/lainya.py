@@ -156,27 +156,23 @@ class Xnxx:
         else:
             prints(Panel(f"[{merah}!{hps}] input yang bener"));self.ua_random()
         self.hapus_ua()
-        prints(Panel("    Tekan CTRL terus tekan C untuk berhenti"))
         url = "https://developers.whatismybrowser.com/useragents/explore/"+ type
         with requests.Session() as xyz:
             req = xyz.get(url)
-            pra = par(req.content,'html.parser')
+            pra = parser(req.content,'html.parser')
             li = re.findall('<td><a class=\".*?\" href=\".*?\">(.*?)</a></td>',str(pra))
             for y in li:
                 try:
-                    x = f"{hijau}{y}{hps}"
-                    self.asd += 1
-                    pu = str(self.asd)
-                    self.data_ua.update({pu:x.replace('[#AAAAAA]','')})
-                    prints(Panel(x,title=f'[{bir}{pu}{hps}]',width=54,title_align='left',style='#FF8F00'))
-                    time.sleep(2)
+                    ue=[]
+                    asd = 0
+                    data_ua={}
+                    asd += 1
+                    x = f"{y}"
+                    pu = str(asd)
+                    data_ua.update({pu:x.replace('[#AAAAAA]','')})
+                    open('uaku.txt','a').write(x+'\n')
                 except KeyboardInterrupt:
                     break
-        ch = int(input(f"{N}   └──> "))
-        open('data/ua.txt','w').write(self.data_ua[str(ch)])
-        pilihan = open('data/ua.txt','r').read()
-        prints(Panel(f'''{pilihan}''',title=f'[ {bir}User Agent{hps} ]',subtitle=f'[ {bir}Sukses Diganti{hps} ]',padding=(1,4),width=54,title_align='center',style='#FF8F00'))
-        input(f" [ {O}Kembali{N} ] ");tt.Brute()
 
     def dump_flw(self):
         try:
