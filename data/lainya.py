@@ -155,7 +155,6 @@ class Xnxx:
             type = 'software_name/facebook-app'
         else:
             prints(Panel(f"[{merah}!{hps}] input yang bener"));self.ua_random()
-        self.hapus_ua()
         url = "https://developers.whatismybrowser.com/useragents/explore/"+ type
         with requests.Session() as xyz:
             req = xyz.get(url)
